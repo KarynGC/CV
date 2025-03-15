@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #3498db;
+    --primary-color: #1e033bd7;
     --secondary-color: #2c3e50;
     --accent-color: #e74c3c;
     --light-color: #ecf0f1;
@@ -18,6 +18,49 @@ body {
     color: var(--dark-color);
     line-height: 1.6;
 }
+
+/***Indice de navegacion***/
+nav {
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+.logo {
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+.nav-links a.active {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
 /*Header y perfil*/
 
 header {
@@ -88,9 +131,111 @@ h2::after {
     background-color: var(--accent-color);
 }
 
+/*Container y cuerpo*/
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
 
+section {
+    background-color: white;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
 
+section:hover {
+    transform: translateY(-5px);
+}
+
+/*Especificaciones por item*/
+/*------ Educacion y Experiencia ------*/
+
+.education-item, .experience-item {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--primary-color);
+}
+
+.education-item:last-child, .experience-item:last-child {
+    margin-bottom: 0;
+}
+
+.date {
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.institution, .job-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.description {
+    margin-top: 0.5rem;
+    color: #555;
+}
+
+/*------ Habilidades ------*/
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-category {
+    margin-bottom: 1.5rem;
+}
+
+.skill-title {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+
+/*------ Nivel de habilidad ------*/
+
+.skill-level {
+    color: var(--accent-color);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+}
+
+/*Certificado*/
+
+.certificates-section {
+    padding-bottom: 3rem;
+}
 
 .certificate-img {
     max-width: 100%;
@@ -100,3 +245,41 @@ h2::after {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.certificates-carousel {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.certificate-item {
+    padding: 1rem;
+    text-align: center;
+}
+.certificate-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.certificate-issuer {
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.certificate-date {
+    color: var(--accent-color);
+}
+
+/*Footer*/
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+/* Clase para animaciones */
+section.animated {
+    animation: fadeIn 0.5s ease;
+}
+
