@@ -107,6 +107,23 @@ header {
     align-items: center;
     gap: 0.5rem;
 }
+/*------ Redes Social------*/
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
 
 /*Titulos*/
 h1 {
